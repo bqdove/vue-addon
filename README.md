@@ -1,21 +1,25 @@
-# editor
+# Notadd Addon
 
-> A Vue.js project
+> A **Notadd Addon** project
 
 ## Build Setup
 
 ``` bash
-# install dependencies
+# For NPM
+# Install dependencies
 npm install
 
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
+# Build for production with minification
 npm run build
+```
 
-# build for production and view the bundle analyzer report
-npm run build --report
+``` bash
+# For Yarn
+# Install dependencies
+yarn install
+
+# Build for production with minification
+yarn build
 ```
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

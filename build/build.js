@@ -11,7 +11,7 @@ let rm = require('rimraf');
 let webpack = require('webpack');
 let webpackConfig = merge(buildWebpackConfig, {
     plugins: [
-        new webpack.ProgressPlugin()
+        new webpack.ProgressPlugin(),
     ]
 });
 

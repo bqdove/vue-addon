@@ -21,25 +21,25 @@ let webpackConfig = {
                 enforce: 'pre',
                 include: [resolve('src'), resolve('test')],
                 options: {
-                    formatter: require('eslint-friendly-formatter')
+                    formatter: require('eslint-friendly-formatter'),
                 }
             },
             {
                 test: /\.vue$/,
                 loader: 'vue-loader',
-                options: vueLoaderConfig
+                options: vueLoaderConfig,
             },
             {
                 test: /\.js$/,
                 loader: 'babel-loader',
-                include: [resolve('src'), resolve('test')]
+                include: [resolve('src'), resolve('test')],
             },
             {
                 test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
                 loader: 'url-loader',
                 options: {
                     limit: 10000,
-                    name: utils.assetsPath('img/[name].[ext]')
+                    name: utils.assetsPath('img/[name].[ext]'),
                 }
             },
             {
@@ -47,7 +47,7 @@ let webpackConfig = {
                 loader: 'url-loader',
                 options: {
                     limit: 10000,
-                    name: utils.assetsPath('media/[name].[ext]')
+                    name: utils.assetsPath('media/[name].[ext]'),
                 }
             },
             {
@@ -55,12 +55,12 @@ let webpackConfig = {
                 loader: 'url-loader',
                 options: {
                     limit: 10000,
-                    name: utils.assetsPath('fonts/[name].[ext]')
+                    name: utils.assetsPath('fonts/[name].[ext]'),
                 }
             },
             ...utils.styleLoaders({
                 sourceMap: config.build.productionSourceMap,
-                extract: true
+                extract: true,
             }),
         ]
     },
@@ -72,15 +72,15 @@ let webpackConfig = {
     },
     plugins: [
         new webpack.DefinePlugin({
-            'process.env': env
+            'process.env': env,
         }),
         new webpack.optimize.UglifyJsPlugin({
             compress: {
-                warnings: false
+                warnings: false,
             },
         }),
         new ExtractTextPlugin({
-            filename: utils.assetsPath('css/[name].css')
+            filename: utils.assetsPath('css/[name].css'),
         }),
         new OptimizeCSSPlugin(),
     ],
@@ -94,7 +94,7 @@ let webpackConfig = {
 };
 
 if (config.build.productionGzip) {
-    let CompressionWebpackPlugin = require('compression-webpack-plugin')
+    let CompressionWebpackPlugin = require('compression-webpack-plugin');
 
     webpackConfig.plugins.push(
         new CompressionWebpackPlugin({
@@ -106,9 +106,9 @@ if (config.build.productionGzip) {
                 ')$'
             ),
             threshold: 10240,
-            minRatio: 0.8
+            minRatio: 0.8,
         })
-    )
+    );
 }
 
 if (config.build.bundleAnalyzerReport) {
